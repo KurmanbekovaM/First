@@ -1,0 +1,10 @@
+g = int(100)
+while g>0:
+    if(g*7+23)%2==0:
+        print(g)
+        g -= 1
+    else:
+            print("Я обязательно выживу")
+            g -= 1
+            
+    #I will try to change it more correctly after all my exams
