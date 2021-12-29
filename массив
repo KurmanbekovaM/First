@@ -1,0 +1,9 @@
+#Предлагает пользователю вводить данные в массив пока пользователь не введет фразу "stop it"
+try:
+    my_list = []
+     
+    while True:
+        my_list.append(int(input()))
+         
+except:
+    print(my_list)
