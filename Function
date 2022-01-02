@@ -1,0 +1,20 @@
+while True:
+    s = input("Значки(+,-,*,/):")
+    if s =="0":
+        break
+    if s not in ("+","-","*","/"):
+        quit("конец")
+    a = float(input("a = "))
+    b = float(input("b = "))
+    if s == "+":
+        print(a + b)
+    elif s == "-":
+        print(a - b)
+    elif s == "*":
+        print(a * b)
+    elif s == "/":
+        if b !=0:
+          print(a / b)
+        else:
+            print("Деление на ноль равно нулю")
+        
