@@ -1,0 +1,61 @@
+class customer:  
+    m = "Покупатель"  
+    name = "Анджелина Джоли"
+    
+    def show(self):  
+        print("{}:\n{}".format(self.m, self.name))  
+  
+woman = customer()
+woman.show()
+
+class product:  
+    n = "Товары"  
+    name = "Куртки,футболки,худи,свитшоты,спортивки"
+    
+    def show(self):  
+        print("{}:\n{}".format(self.n, self.name))  
+  
+clothes = product()
+clothes.show()
+
+cart = []
+
+
+def addItem(item):
+    cart.append(item)
+    print("{0} добавили в Вашу корзину".format(item))
+
+
+def showCart():
+    if cart:
+      print("В Вашей корзине есть:")
+      for item in cart:
+        print( "- {0}".format(item) )
+    else:
+      print("Ваша корзина пустая")
+
+def clearCart():
+    cart.clear()
+    print("Ваша корзина пустая")
+    
+
+def main():
+    done = False
+    while not done:
+        ans = input("выход/купить/показать/очистить: ").lower()
+        if ans == "выход":
+          print("Вы успешно вышли")
+          showCart()
+          done = True
+        elif ans == "купить":
+            item = input("Что хотите купить?").title()
+            addItem(item)
+        elif ans == "показать":
+            showCart()
+        elif ans == "очистить":
+            clearCart()
+        else:
+            print("Вы что-то сделали неправильно")
+
+
+main()
